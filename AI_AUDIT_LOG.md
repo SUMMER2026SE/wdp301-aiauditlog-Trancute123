@@ -9,8 +9,8 @@
 | Học kỳ | SU26 |
 | Tên project | Valo Parking hệ thống tự động hóa và số hóa toàn diện quy trình vận hành bãi đỗ xe ô tô |
 | Nhóm | Group 01 |
-| Ngày bắt đầu ghi log | 07/06/2026 |
-| Ngày cập nhật gần nhất | 09/06/2026 |
+| Ngày bắt đầu ghi log | 16/06/2026 |
+| Ngày cập nhật gần nhất | 18/06/2026 |
 
 Ghi chú: file này được nhóm dùng để ghi lại các phần có sử dụng AI trong quá trình làm project. Nội dung AI đưa ra không được nộp nguyên xi, nhóm có kiểm tra lại, chỉnh sửa code và chạy thử trước khi commit.
 
@@ -312,6 +312,38 @@ Minh chứng:
 |---|---|
 | File liên quan | `frontend/src/pages/Admin/AccountManagement.jsx`, `frontend/src/pages/Staff/AccountManagement.jsx`, `frontend/src/components/Navbar.jsx`, `frontend/src/layouts/DashboardLayout.jsx`, `backend/src/controllers/adminController.js`, `backend/src/routes/adminRoutes.js` |
 | Kiểm tra | Thao tác edit account và view navbar trên giao diện Admin/Staff |
+
+---
+
+### Lần 9 - Cập nhật và Refactor tính năng Quản lý Gói dịch vụ (Ticket Packages)
+
+| Nội dung | Thông tin |
+|---|---|
+| Ngày | 18/06/2026 |
+| Công cụ | ChatGPT / Codex / Antigravity |
+| Phần việc | Frontend UI (Admin Ticket Packages), Backend (TicketPackage Controller, Models, Routes) |
+| Mức độ sử dụng | AI hỗ trợ nhiều, nhóm tinh chỉnh và rà soát lại nghiệp vụ |
+
+Prompt đã dùng:
+
+```text
+hỗ trợ refactor lại luồng quản lý gói dịch vụ và loại gói (package types)
+cập nhật giao diện TicketPackages.jsx ở frontend để có thể sửa/xóa package type
+viết lại các rule quản lý gói bên backend controller
+```
+
+Kết quả AI hỗ trợ:
+
+- Cập nhật giao diện `TicketPackages.jsx` (Frontend) cho Admin, thay component quản lý loại gói để hỗ trợ đầy đủ các thao tác Create, Update, Delete.
+- Cập nhật luồng xử lý và rule của `ticketPackageController.js` và `adminRoutes.js` ở backend.
+- Cập nhật schema/model `TicketPackage.js` và `PackageType.js` để phù hợp với kiến trúc dữ liệu mới.
+
+Minh chứng:
+
+| Nội dung | Kết quả |
+|---|---|
+| File liên quan | `frontend/src/pages/Admin/TicketPackages.jsx`, `backend/src/controllers/ticketPackageController.js`, `backend/src/models/PackageType.js`, `backend/src/models/TicketPackage.js`, `backend/src/routes/adminRoutes.js` |
+| Kiểm tra | Thao tác CRUD trên giao diện Quản lý Gói dịch vụ của Admin |
 
 ---
 
